@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>آوین پورملای لنگرودی | رزومه حرفه‌ای</title>
+    <!-- فونت وزیرمتن (وزن‌های 400 و 700) -->
+    <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
+    <!-- Font Awesome برای آیکون‌ها -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+            background: #eef2f7;
+            color: #2d3436;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .resume-container {
+            max-width: 1100px;
+            width: 100%;
+            background: #ffffff;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            display: grid;
+            grid-template-columns: 34% 66%;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        /* ========== سایدبار (سمت راست در RTL) ========== */
+        .sidebar {
+            background: #1e2a3a;
+            color: #eaeef3;
+            padding: 40px 25px;
+        }
+
+        .profile-header {
+            text-align: center;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+            padding-bottom: 25px;
+            margin-bottom: 25px;
+        }
+
+        .avatar {
+            width: 120px;
+            height: 120px;
+            background: #3498db;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+            font-weight: 700;
+            color: #fff;
+            margin: 0 auto 15px;
+            border: 4px solid #5b7a9a;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+        }
+
+        .profile-header h1 {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: #fff;
+        }
+
+        .profile-header .tagline {
+            font-size: 13px;
+            color: #b0c4de;
+            margin-top: 5px;
+            font-weight: 400;
+        }
+
+        /* ====== خط مکان (شهر) به طور کامل حذف شد ====== */
+
+        /* بخش های سایدبار */
+        .sidebar-section {
+            margin-bottom: 28px;
+        }
+
+        .sidebar-section h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: #fff;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .sidebar-section h3 i {
+            color: #3498db;
+            font-size: 16px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 13px;
+            color: #cfdbe8;
+            line-height: 1.6;
+            word-break: break-word;
+        }
+
+        .contact-item i {
+            width: 18px;
+            color: #3498db;
+            font-size: 15px;
+            text-align: center;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background: rgba(52, 152, 219, 0.15);
+            border: 1px solid rgba(52, 152, 219, 0.2);
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            color: #d4e2f0;
+            margin: 3px 3px 3px 0;
+            transition: 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: #3498db;
+            color: #fff;
+            border-color: #3498db;
+        }
+
+        .lang-item {
+            display: flex;
+            justify-content: space-between;
+            font-size: 13px;
+            padding: 6px 0;
+            border-bottom: 1px dashed rgba(255,255,255,0.05);
+        }
+        .lang-item span:last-child {
+            color: #b0c4de;
+            font-size: 12px;
+        }
+
+        /* ========== بخش اصلی (محتوا) ========== */
+        .main-content {
+            padding: 40px 35px;
+            background: #ffffff;
+        }
+
+        .main-section {
+            margin-bottom: 32px;
+        }
+
+        .main-section h2 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e2a3a;
+            border-right: 5px solid #3498db;
+            padding-right: 15px;
+            margin-bottom: 18px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .main-section h2 i {
+            color: #3498db;
+            font-size: 18px;
+        }
+
+        /* خلاصه / درباره من */
+        .summary-text {
+            font-size: 14px;
+            line-height: 2;
+            color: #3d4a5a;
+            background: #f8faff;
+            padding: 18px 22px;
+            border-radius: 14px;
+            border-right: 4px solid #3498db;
+        }
+
+        /* سابقه شغلی */
+        .job-item {
+            margin-bottom: 22px;
+            padding-bottom: 22px;
+            border-bottom: 1px solid #ecf0f3;
+        }
+        .job-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .job-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 5px;
+        }
+
+        .job-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e2a3a;
+        }
+
+        .job-company {
+            font-size: 14px;
+            font-weight: 500;
+            color: #3498db;
+        }
+
+        .job-date {
+            font-size: 12px;
+            color: #7f8c8d;
+            background: #ecf0f3;
+            padding: 2px 12px;
+            border-radius: 20px;
+            margin-top: 4px;
+        }
+
+        .job-desc {
+            font-size: 13.5px;
+            color: #3d4a5a;
+            line-height: 1.8;
+            margin-top: 8px;
+            padding-right: 10px;
+            list-style-type: none;
+        }
+        .job-desc li {
+            position: relative;
+            padding-right: 20px;
+            margin-bottom: 4px;
+        }
+        .job-desc li::before {
+            content: "▹";
+            color: #3498db;
+            position: absolute;
+            right: 0;
+            font-weight: bold;
+        }
+
+        /* تحصیلات */
+        .edu-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            background: #f8faff;
+            padding: 14px 20px;
+            border-radius: 12px;
+            border-right: 4px solid #3498db;
+        }
+        .edu-item .title {
+            font-weight: 700;
+            color: #1e2a3a;
+            font-size: 15px;
+        }
+        .edu-item .detail {
+            font-size: 13px;
+            color: #4a5a6a;
+        }
+
+        /* حقوق و انتظارات */
+        .salary-box {
+            background: linear-gradient(135deg, #f0f6fe 0%, #ffffff 100%);
+            border: 1px dashed #3498db;
+            border-radius: 14px;
+            padding: 18px 22px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .salary-box .label {
+            font-weight: 700;
+            color: #1e2a3a;
+            font-size: 14px;
+        }
+        .salary-box .value {
+            font-size: 18px;
+            font-weight: 700;
+            color: #2c3e50;
+            background: #fff;
+            padding: 4px 20px;
+            border-radius: 40px;
+            border: 1px solid #3498db;
+        }
+
+        /* ریسپانسیو */
+        @media (max-width: 768px) {
+            .resume-container {
+                grid-template-columns: 1fr;
+                border-radius: 16px;
+            }
+            .sidebar {
+                padding: 30px 20px;
+            }
+            .main-content {
+                padding: 25px 20px;
+            }
+            .profile-header h1 {
+                font-size: 20px;
+            }
+            .job-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .salary-box {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 10px;
+            }
+        }
+
+        @media print {
+            body { background: white; padding: 0; }
+            .resume-container { box-shadow: none; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="resume-container">
+
+    <!-- ====== سایدبار ====== -->
+    <aside class="sidebar">
+        <div class="profile-header">
+            <div class="avatar">آ</div>
+            <h1>آوین پورملای لنگرودی</h1>
+            <div class="tagline">مدرس بین‌المللی | کارشناس فروش دوره‌های آموزشی</div>
+            <!-- خط شهر/موقعیت مکانی به طور کامل حذف شد -->
+        </div>
+
+        <!-- اطلاعات تماس -->
+        <div class="sidebar-section">
+            <h3><i class="fas fa-address-card"></i> تماس</h3>
+            <div class="contact-item"><i class="fas fa-phone-alt"></i> ۰۹۱۷۴۱۲۳۴۲۸</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> avinlangroodi4@gmail.com</div>
+            <!-- خط تاریخ تولد حذف شد -->
+            <!-- خط وضعیت تاهل (مجرد) حذف شد -->
+        </div>
+
+        <!-- زبان‌ها -->
+        <div class="sidebar-section">
+            <h3><i class="fas fa-language"></i> زبان‌ها</h3>
+            <div class="lang-item"><span>فارسی</span><span>زبان مادری</span></div>
+            <div class="lang-item"><span>انگلیسی</span><span>پیشرفته (C1)</span></div>
+        </div>
+
+        <!-- نرم‌افزارها / مهارت‌ها -->
+        <div class="sidebar-section">
+            <h3><i class="fas fa-laptop-code"></i> مهارت‌های نرم‌افزاری</h3>
+            <div style="margin-top: 5px;">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">HTML &amp; CSS</span>
+                <span class="skill-tag">Excel</span>
+                <span class="skill-tag">PowerPoint</span>
+                <span class="skill-tag">Word</span>
+                <span class="skill-tag">Microsoft Dynamics</span>
+                <span class="skill-tag">Java</span>
+                <span class="skill-tag">C++</span>
+                <span class="skill-tag">Outlook</span>
+                <span class="skill-tag">طراحی سایت</span>
+            </div>
+        </div>
+
+        <!-- اطلاعات تکمیلی -->
+        <div class="sidebar-section">
+            <h3><i class="fas fa-bolt"></i> توانمندی‌ها</h3>
+            <div style="font-size: 13px; line-height: 2; color: #cfdbe8;">
+                • مذاکره به زبان انگلیسی<br>
+                • پرزنت و ارائه حرفه‌ای<br>
+                • ایده‌پردازی تبلیغاتی<br>
+                • مشاوره مهاجرت کانادا<br>
+                • تدریس ریاضی و کامپیوتر
+            </div>
+        </div>
+    </aside>
+
+    <!-- ====== بخش اصلی ====== -->
+    <main class="main-content">
+
+        <!-- درباره من -->
+        <section class="main-section">
+            <h2><i class="fas fa-user-astronaut"></i> درباره من</h2>
+            <div class="summary-text">
+                من آوین هستم، مدرس ریاضی و علوم کامپیوتر به زبان انگلیسی با ۴ سال سابقه‌ی تدریس بین‌المللی برای دانش‌آموزان کانادا، آمریکا، استرالیا، امارات و انگلیس. 
+                هم‌زمان با تدریس، به‌عنوان <strong>کارشناس فروش دوره‌های آموزشی</strong> نیز فعالیت داشته‌ام و توانسته‌ام با شناسایی نیازهای واقعی دانش‌آموزان، پکیج‌های تخصصی را به مشتریان سراسر جهان بفروشم. 
+                به طراحی سایت، ایده‌پردازی محتوایی و مشاوره‌ی مهاجرت مسلط هستم و به دنبال یک چالش فروش حرفه‌ای در تیم شما هستم.
+            </div>
+        </section>
+
+        <!-- سوابق شغلی -->
+        <section class="main-section">
+            <h2><i class="fas fa-briefcase"></i> سوابق شغلی</h2>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">مدرس ریاضی و علوم کامپیوتر (به زبان انگلیسی)</span>
+                    <span class="job-company">THH CANADA</span>
+                </div>
+                <div class="job-date"><i class="far fa-calendar-alt"></i> آبان ۱۴۰۴ – اکنون</div>
+                <ul class="job-desc">
+                    <li>تدریس آنلاین ریاضیات و مبانی برنامه‌نویسی به دانش‌آموزان کانادایی.</li>
+                    <li>طراحی محتوای آموزشی متناسب با سیستم آموزشی آمریکای شمالی.</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">طراح سایت</span>
+                    <span class="job-company">JA company Canada</span>
+                </div>
+                <div class="job-date"><i class="far fa-calendar-alt"></i> شهریور ۱۴۰۴ – اردیبهشت ۱۴۰۵</div>
+                <ul class="job-desc">
+                    <li>طراحی و پیاده‌سازی پورتال‌های سازمانی با استفاده از HTML، CSS و Python.</li>
+                    <li>بهبود تجربه‌ی کاربری (UX) برای مشتریان بین‌المللی.</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">کارشناسی فروش دوره‌های آموزشی (بین‌المللی)</span>
+                    <span class="job-company">فریلنسر (خوداشتغالی)</span>
+                </div>
+                <div class="job-date"><i class="far fa-calendar-alt"></i> خرداد ۱۴۰۰ – اکنون</div>
+                <ul class="job-desc">
+                    <li>فروش پکیج‌های تدریس خصوصی و مشاوره‌ی تحصیلی به دانش‌آموزان خارج از کشور.</li>
+                    <li>مدیریت چرخه‌ی کامل فروش: شناسایی نیاز، پرزنت، مذاکره و بستن قرارداد.</li>
+                    <li>بیشترین فروش ماهانه: <strong>۴۲۰ میلیون تومان</strong> (پکیج به ۸ دانش‌آموز خارجی).</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">ایده‌پرداز تبلیغات</span>
+                    <span class="job-company">همکاری با فرشاد سایلنت (یوتیوبر)</span>
+                </div>
+                <div class="job-date"><i class="far fa-calendar-alt"></i> فروردین ۱۴۰۴ – شهریور ۱۴۰۴</div>
+                <ul class="job-desc">
+                    <li>ارائه‌ی استراتژی‌های خلاقانه برای جذب مخاطب و افزایش تعامل در شبکه‌های اجتماعی.</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">مشاور مهاجرت کانادا</span>
+                    <span class="job-company">فریلنسر</span>
+                </div>
+                <div class="job-date"><i class="far fa-calendar-alt"></i> مرداد ۱۴۰۲ – اکنون</div>
+                <ul class="job-desc">
+                    <li>ارائه‌ی مشاوره‌ی تخصصی در زمینه‌ی تحصیل و مهاجرت به کانادا.</li>
+                    <li>تحلیل مسیرهای مهاجرتی و برنامه‌ریزی تحصیلی برای متقاضیان.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- تحصیلات -->
+        <section class="main-section">
+            <h2><i class="fas fa-graduation-cap"></i> تحصیلات</h2>
+            <div class="edu-item">
+                <span class="title">دیپلم ریاضی فیزیک</span>
+                <span class="detail">شیراز | معدل ۱۹+</span>
+            </div>
+        </section>
+
+        <!-- حقوق درخواستی و پاسخ به سه سوال استخدامی -->
+        <section class="main-section">
+            <h2><i class="fas fa-handshake"></i> انتظارات شغلی &amp; پاسخ به سوالات</h2>
+            
+            <div class="salary-box">
+                <span class="label"><i class="fas fa-money-bill-wave" style="color:#3498db; margin-left:8px;"></i> حقوق درخواستی:</span>
+                <span class="value">۱۵ – ۲۰ میلیون تومان</span>
+            </div>
+
+            <div style="margin-top: 20px; background: #f8faff; padding: 18px 22px; border-radius: 14px; border-right: 4px solid #2ecc71;">
+                <p style="font-weight: 700; color: #1e2a3a; margin-bottom: 10px;"><i class="fas fa-microphone-alt" style="color:#3498db; margin-left:8px;"></i> پاسخ به سه سؤال کلیدی فروش:</p>
+                <ul style="list-style: none; padding: 0; font-size: 13.5px; line-height: 2; color: #2d3436;">
+                    <li><strong style="color:#1e2a3a;">۱. بیشترین فروش:</strong> ۴۲۰ میلیون تومان در یک ماه (فروش پکیج‌های آموزشی به ۸ دانش‌آموز خارجی).</li>
+                    <li><strong style="color:#1e2a3a;">۲. بیشترین درآمد پروسانتی:</strong> ۳۰٪ سود خالص پروژه (معادل ۷۵ میلیون تومان کارمزد از طراحی پورتال آموزشی).</li>
+                    <li><strong style="color:#1e2a3a;">۳. اگر مشتری بگوید گران است:</strong> با همدلی شروع می‌کنم، سپس با تحلیل هزینه-فایده ارزش واقعی را نشان می‌دهم (هزینه‌ی عدم سرمایه‌گذاری را محاسبه می‌کنم)، کیفیت منحصربه‌فرد را با رقبا مقایسه کرده و در نهایت پکیج‌های انعطاف‌پذیر یا اقساط را پیشنهاد می‌دهم تا مشتری به‌جای "خرج"، احساس "سرمایه‌گذاری" کند.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- اطلاعات تکمیلی جهت نمایش -->
+        <div style="border-top: 1px solid #ecf0f3; margin-top: 15px; padding-top: 15px; display: flex; justify-content: space-between; flex-wrap: wrap; font-size: 12px; color: #7f8c8d;">
+            <span><i class="fas fa-check-circle" style="color:#2ecc71;"></i> آماده‌ی همکاری فوری</span>
+            <span><i class="fas fa-globe"></i> مسلط به تدریس و مذاکره به زبان انگلیسی</span>
+        </div>
+
+    </main>
+</div>
+
+</body>
+</html>
