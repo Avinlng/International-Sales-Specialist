@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>آوین پورملای لنگرودی | رزومه حرفه‌ای</title>
-    <!-- فونت وزیرمتن (وزن‌های 400 و 700) -->
+    <!-- فونت وزیرمتن -->
     <link href="https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/Vazirmatn-font-face.css" rel="stylesheet" type="text/css" />
-    <!-- Font Awesome برای آیکون‌ها -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
@@ -38,7 +38,6 @@
             transition: all 0.3s ease;
         }
 
-        /* ========== سایدبار (سمت راست در RTL) ========== */
         .sidebar {
             background: #1e2a3a;
             color: #eaeef3;
@@ -82,9 +81,6 @@
             font-weight: 400;
         }
 
-        /* ====== خط مکان (شهر) به طور کامل حذف شد ====== */
-
-        /* بخش های سایدبار */
         .sidebar-section {
             margin-bottom: 28px;
         }
@@ -155,7 +151,6 @@
             font-size: 12px;
         }
 
-        /* ========== بخش اصلی (محتوا) ========== */
         .main-content {
             padding: 40px 35px;
             background: #ffffff;
@@ -182,7 +177,6 @@
             font-size: 18px;
         }
 
-        /* خلاصه / درباره من */
         .summary-text {
             font-size: 14px;
             line-height: 2;
@@ -193,7 +187,6 @@
             border-right: 4px solid #3498db;
         }
 
-        /* سابقه شغلی */
         .job-item {
             margin-bottom: 22px;
             padding-bottom: 22px;
@@ -255,7 +248,6 @@
             font-weight: bold;
         }
 
-        /* تحصیلات */
         .edu-item {
             display: flex;
             flex-wrap: wrap;
@@ -276,34 +268,6 @@
             color: #4a5a6a;
         }
 
-        /* حقوق و انتظارات */
-        .salary-box {
-            background: linear-gradient(135deg, #f0f6fe 0%, #ffffff 100%);
-            border: 1px dashed #3498db;
-            border-radius: 14px;
-            padding: 18px 22px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 10px;
-        }
-        .salary-box .label {
-            font-weight: 700;
-            color: #1e2a3a;
-            font-size: 14px;
-        }
-        .salary-box .value {
-            font-size: 18px;
-            font-weight: 700;
-            color: #2c3e50;
-            background: #fff;
-            padding: 4px 20px;
-            border-radius: 40px;
-            border: 1px solid #3498db;
-        }
-
-        /* ریسپانسیو */
         @media (max-width: 768px) {
             .resume-container {
                 grid-template-columns: 1fr;
@@ -321,11 +285,6 @@
             .job-header {
                 flex-direction: column;
                 align-items: flex-start;
-            }
-            .salary-box {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 10px;
             }
         }
 
@@ -345,7 +304,6 @@
             <div class="avatar">آ</div>
             <h1>آوین پورملای لنگرودی</h1>
             <div class="tagline">مدرس بین‌المللی | کارشناس فروش دوره‌های آموزشی</div>
-            <!-- خط شهر/موقعیت مکانی به طور کامل حذف شد -->
         </div>
 
         <!-- اطلاعات تماس -->
@@ -353,8 +311,6 @@
             <h3><i class="fas fa-address-card"></i> تماس</h3>
             <div class="contact-item"><i class="fas fa-phone-alt"></i> ۰۹۱۷۴۱۲۳۴۲۸</div>
             <div class="contact-item"><i class="fas fa-envelope"></i> avinlangroodi4@gmail.com</div>
-            <!-- خط تاریخ تولد حذف شد -->
-            <!-- خط وضعیت تاهل (مجرد) حذف شد -->
         </div>
 
         <!-- زبان‌ها -->
@@ -402,8 +358,13 @@
             <h2><i class="fas fa-user-astronaut"></i> درباره من</h2>
             <div class="summary-text">
                 من آوین هستم، مدرس ریاضی و علوم کامپیوتر به زبان انگلیسی با ۴ سال سابقه‌ی تدریس بین‌المللی برای دانش‌آموزان کانادا، آمریکا، استرالیا، امارات و انگلیس. 
+                دروس ریاضی و علوم کامپیوتر را به‌طور کامل به زبان انگلیسی تدریس کرده‌ام. همچنین چند ماه کارآموزی تدریس را در آکادمی دو زبانه‌ی پنج‌ستاره گذرانده‌ام که به کودکان مدرک بین‌المللی اعطا می‌کند و در حال حاضر به عنوان <strong>ایده‌پرداز و توسعه‌دهنده‌ی وبسایت</strong> آن آکادمی نیز فعالیت دارم.
                 هم‌زمان با تدریس، به‌عنوان <strong>کارشناس فروش دوره‌های آموزشی</strong> نیز فعالیت داشته‌ام و توانسته‌ام با شناسایی نیازهای واقعی دانش‌آموزان، پکیج‌های تخصصی را به مشتریان سراسر جهان بفروشم. 
-                به طراحی سایت، ایده‌پردازی محتوایی و مشاوره‌ی مهاجرت مسلط هستم و به دنبال یک چالش فروش حرفه‌ای در تیم شما هستم.
+                به طراحی سایت، ایده‌پردازی محتوایی و مشاوره‌ی مهاجرت مسلط هستم.
+                <br><br>
+                <strong>نکته‌ی مهم:</strong> به دلیل همکاری با دانش‌آموزان در مناطق زمانی مختلف (کانادا، آمریکا، استرالیا و...)، تجربه‌ی تدریس در ساعات <strong>۱۰ شب تا ۸ صبح به وقت ایران</strong> را دارم و همواره از <strong>اینترنت پرسرعت و پایدار در تمام فصول سال</strong> برخوردار هستم تا بتوانم بدون کوچکترین اختلالی، تدریس و جلسات آنلاین را برگزار کنم.
+                <br><br>
+                در حال حاضر به دنبال یک چالش فروش حرفه‌ای در تیم شما هستم تا از تجربیات بین‌المللی و مهارت‌های ارتباطی خود برای رشد مجموعه‌تان استفاده کنم.
             </div>
         </section>
 
@@ -420,6 +381,19 @@
                 <ul class="job-desc">
                     <li>تدریس آنلاین ریاضیات و مبانی برنامه‌نویسی به دانش‌آموزان کانادایی.</li>
                     <li>طراحی محتوای آموزشی متناسب با سیستم آموزشی آمریکای شمالی.</li>
+                </ul>
+            </div>
+
+            <div class="job-item">
+                <div class="job-header">
+                    <span class="job-title">ایده‌پرداز و توسعه‌دهنده وبسایت</span>
+                    <span class="job-company">آکادمی دو زبانه‌ی پنج‌ستاره (دارای مدرک بین‌المللی)</span>
+                </div>
+                <div class="job-date"><i class="far fa-calendar-alt"></i> [ماه سال – اکنون]</div>
+                <ul class="job-desc">
+                    <li>طراحی و توسعه‌ی وبسایت آکادمی با استفاده از HTML، CSS و Python.</li>
+                    <li>ایده‌پردازی برای بهبود محتوای آموزشی و افزایش تعامل با دانش‌آموزان.</li>
+                    <li>گذراندن دوره‌ی کارآموزی تدریس در این آکادمی و آشنایی با متدهای بین‌المللی آموزش.</li>
                 </ul>
             </div>
 
@@ -451,11 +425,12 @@
             <div class="job-item">
                 <div class="job-header">
                     <span class="job-title">ایده‌پرداز تبلیغات</span>
-                    <span class="job-company">همکاری با فرشاد سایلنت (یوتیوبر)</span>
+                    <span class="job-company">همکاری با فرشاد سایلنت (یوتیوبر با بیش از ۸۵۰,۰۰۰ دنبال‌کننده و ۲.۲ میلیون فالوور اینستاگرام)</span>
                 </div>
                 <div class="job-date"><i class="far fa-calendar-alt"></i> فروردین ۱۴۰۴ – شهریور ۱۴۰۴</div>
                 <ul class="job-desc">
                     <li>ارائه‌ی استراتژی‌های خلاقانه برای جذب مخاطب و افزایش تعامل در شبکه‌های اجتماعی.</li>
+                    <li>طراحی کمپین‌های تبلیغاتی هدفمند برای افزایش نرخ تبدیل و تعامل با مخاطبان.</li>
                 </ul>
             </div>
 
@@ -478,25 +453,6 @@
             <div class="edu-item">
                 <span class="title">دیپلم ریاضی فیزیک</span>
                 <span class="detail">شیراز | معدل ۱۹+</span>
-            </div>
-        </section>
-
-        <!-- حقوق درخواستی و پاسخ به سه سوال استخدامی -->
-        <section class="main-section">
-            <h2><i class="fas fa-handshake"></i> انتظارات شغلی &amp; پاسخ به سوالات</h2>
-            
-            <div class="salary-box">
-                <span class="label"><i class="fas fa-money-bill-wave" style="color:#3498db; margin-left:8px;"></i> حقوق درخواستی:</span>
-                <span class="value">۱۵ – ۲۰ میلیون تومان</span>
-            </div>
-
-            <div style="margin-top: 20px; background: #f8faff; padding: 18px 22px; border-radius: 14px; border-right: 4px solid #2ecc71;">
-                <p style="font-weight: 700; color: #1e2a3a; margin-bottom: 10px;"><i class="fas fa-microphone-alt" style="color:#3498db; margin-left:8px;"></i> پاسخ به سه سؤال کلیدی فروش:</p>
-                <ul style="list-style: none; padding: 0; font-size: 13.5px; line-height: 2; color: #2d3436;">
-                    <li><strong style="color:#1e2a3a;">۱. بیشترین فروش:</strong> ۴۲۰ میلیون تومان در یک ماه (فروش پکیج‌های آموزشی به ۸ دانش‌آموز خارجی).</li>
-                    <li><strong style="color:#1e2a3a;">۲. بیشترین درآمد پروسانتی:</strong> ۳۰٪ سود خالص پروژه (معادل ۷۵ میلیون تومان کارمزد از طراحی پورتال آموزشی).</li>
-                    <li><strong style="color:#1e2a3a;">۳. اگر مشتری بگوید گران است:</strong> با همدلی شروع می‌کنم، سپس با تحلیل هزینه-فایده ارزش واقعی را نشان می‌دهم (هزینه‌ی عدم سرمایه‌گذاری را محاسبه می‌کنم)، کیفیت منحصربه‌فرد را با رقبا مقایسه کرده و در نهایت پکیج‌های انعطاف‌پذیر یا اقساط را پیشنهاد می‌دهم تا مشتری به‌جای "خرج"، احساس "سرمایه‌گذاری" کند.</li>
-                </ul>
             </div>
         </section>
 
